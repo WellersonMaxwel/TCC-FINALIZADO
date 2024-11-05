@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Profit - Treino Posterior</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222; /* Fundo mais escuro */
+            color: #f0f0f0; /* Texto mais claro */
+        }
+
+        header {
+            background-color: #4B4B4B;
+            color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav a {
+            background-color: #333; 
+            color: #f0f0f0; 
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0; 
+            color: #333; 
+        }
+
+        .content {
+            padding: 100px 20px 20px; 
+            text-align: center;
+        }
+
+        .presentation {
+            margin: 20px auto;
+            background-color: #333; /* Fundo do cartão de apresentação */
+            padding: 40px; 
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            width: calc(100% - 40px); 
+            max-width: 1200px; 
+            text-align: left; 
+        }
+
+        .presentation h2 {
+            color: #f0f0f0; 
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .presentation p {
+            font-size: 1.1rem;
+            color: #ddd; 
+            line-height: 1.6; 
+            margin-bottom: 15px; 
+        }
+
+        .exercise-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .exercise-item {
+            margin: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            width: 250px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #444; /* Fundo dos itens de exercício */
+        }
+
+        .exercise-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .exercise-info {
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: #f0f0f0; /* Texto mais claro */
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #4B4B4B; 
+            color: #f0f0f0;
+        }
+
+        /* Estilos para o modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.8); 
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #444; /* Fundo do modal */
+            margin: 5% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #f0f0f0; /* Cor ao passar o mouse */
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Estilos para os botões de navegação */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-button {
+            background-color: #4B4B4B; 
+            color: #f0f0f0; 
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #333; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="Profit sem fundo.png" alt="Logo da Academia Profit" class="logo">
+        <p>Seu guia para exercícios físicos</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu Principal</a></li>
+            <li><a href="SOBRE.html">Sobre</a></li>
+            <li><a href="HISTORIA.html">História</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="presentation">
+            <h2>Treino Posterior</h2>
+            <p>Os exercícios para a parte posterior do corpo são fundamentais para o equilíbrio muscular, ajudando na prevenção de lesões e melhorando a postura. Treinar essa área contribui para a performance em atividades diárias e esportivas.</p>
+        </div>
+
+        <h2>Exercícios para a Parte Posterior</h2>
+        
+        <div class="exercise-gallery">
+            <div class="exercise-item" onclick="openModal('remadaInversaModal')">
+                <img src="REMADA GIF.gif" alt="Remada Inversa">
+                <p>Remada Inversa</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 8-12 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+            <div class="exercise-item" onclick="openModal('puxadaBarraModal')">
+                <img src="PUXADA GIF.webp" alt="Puxada na Barra Fixa">
+                <p>Puxada na Barra Fixa</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 6-10 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+            <div class="exercise-item" onclick="openModal('levantamentoTerraModal')">
+                <img src="LEVANTAMENTO TERRA GIF.webp" alt="Levantamento Terra">
+                <p>Levantamento Terra</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 8-10 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+            <div class="exercise-item" onclick="openModal('encolhimentoOmbrosModal')">
+                <img src="ENCOLHIMENTO OMBROS GIF.gif" alt="Encolhimento de Ombros">
+                <p>Encolhimento de Ombros</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 10-15 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+            <div class="exercise-item" onclick="openModal('hiperextensaoModal')">
+                <img src="HIPEREXTENSAO GIF.gif" alt="Hiperextensão">
+                <p>Hiperextensão</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 10-15 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+            <div class="exercise-item" onclick="openModal('pulloverModal')">
+                <img src="PULLOVER GIF.gif" alt="Pullover">
+                <p>Pullover</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 8-12 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botões de navegação -->
+    <div class="navigation-buttons">
+        <a href="INFERIOR.html" class="nav-button left">Ir para Treino Inferior</a>
+        <a href="SUPERIOR.html" class="nav-button right">Ir para Treino Superior</a>
+    </div>
+
+    <!-- Modal para Remada Inversa -->
+    <div id="remadaInversaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('remadaInversaModal')">&times;</span>
+            <h2>Remada Inversa</h2>
+            <p>A Remada Inversa fortalece os músculos das costas, promovendo um equilíbrio muscular adequado e melhorando a postura. Este exercício é essencial para evitar lesões e melhorar a performance em atividades diárias.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Puxada na Barra Fixa -->
+    <div id="puxadaBarraModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('puxadaBarraModal')">&times;</span>
+            <h2>Puxada na Barra Fixa</h2>
+            <p>A Puxada na Barra Fixa é um exercício fundamental para desenvolver a força nas costas e bíceps, além de melhorar a resistência muscular e a postura geral do corpo.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Levantamento Terra -->
+    <div id="levantamentoTerraModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('levantamentoTerraModal')">&times;</span>
+            <h2>Levantamento Terra</h2>
+            <p>O Levantamento Terra é um dos melhores exercícios para trabalhar a cadeia posterior, envolvendo glúteos, isquiotibiais e músculos das costas. Ele é crucial para melhorar a força funcional e prevenir lesões.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Encolhimento de Ombros -->
+    <div id="encolhimentoOmbrosModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('encolhimentoOmbrosModal')">&times;</span>
+            <h2>Encolhimento de Ombros</h2>
+            <p>O Encolhimento de Ombros é excelente para fortalecer os trapézios e melhorar a postura. Ele também é importante para a estabilidade dos ombros durante outros exercícios.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Hiperextensão -->
+    <div id="hiperextensaoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('hiperextensaoModal')">&times;</span>
+            <h2>Hiperextensão</h2>
+            <p>A Hiperextensão é fundamental para fortalecer a região lombar, melhorando a estabilidade do tronco e reduzindo o risco de lesões na coluna.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Pullover -->
+    <div id="pulloverModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('pulloverModal')">&times;</span>
+            <h2>Pullover</h2>
+            <p>O Pullover é um exercício que trabalha a parte superior das costas e a musculatura peitoral, promovendo um melhor alongamento e desenvolvimento muscular da região.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Academia Profit. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Fecha o modal se o usuário clicar fora do conteúdo
+        window.onclick = function(event) {
+            if (event.target.className === "modal") {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+</body>
+</html>

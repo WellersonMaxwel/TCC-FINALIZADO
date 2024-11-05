@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Profit - Treino Inferior</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222; /* Fundo escuro */
+            color: #f0f0f0; /* Texto claro */
+        }
+
+        header {
+            background-color: #4B4B4B;
+            color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav a {
+            background-color: #333; 
+            color: #f0f0f0; 
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0; 
+            color: #333; 
+        }
+
+        .content {
+            padding: 100px 20px 20px; /* Espaço para os botões */
+            text-align: center;
+        }
+
+        .presentation {
+            margin: 20px auto;
+            background-color: #333; /* Fundo do cartão de apresentação */
+            padding: 40px; 
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            width: calc(100% - 40px); 
+            max-width: 1200px; 
+            text-align: left; 
+        }
+
+        .presentation h2 {
+            color: #f0f0f0; 
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .presentation p {
+            font-size: 1.1rem;
+            color: #ddd; 
+            line-height: 1.6; 
+            margin-bottom: 15px; 
+        }
+
+        .exercise-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .exercise-item {
+            margin: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            width: 250px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #444; /* Fundo dos itens de exercício */
+        }
+
+        .exercise-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .exercise-info {
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: #f0f0f0; /* Texto claro */
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #4B4B4B; 
+            color: #f0f0f0;
+        }
+
+        /* Estilos para os botões de navegação */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-button {
+            background-color: #4B4B4B; 
+            color: #f0f0f0; 
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #333; 
+        }
+
+        /* Estilos para o modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.8); 
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #444; /* Fundo do modal */
+            margin: 5% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #f0f0f0; /* Cor ao passar o mouse */
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="Profit sem fundo.png" alt="Logo da Academia Profit" class="logo">
+        <p>Seu guia para exercícios físicos</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu Principal</a></li>
+            <li><a href="SOBRE.html">Sobre</a></li>
+            <li><a href="HISTORIA.html">História</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="presentation">
+            <h2>Treino Inferior</h2>
+            <p>Os exercícios para a parte inferior do corpo são essenciais para o desenvolvimento da força nas pernas e glúteos, além de promover uma melhor estabilidade e equilíbrio. Treinar essa área é crucial para a performance em atividades do dia a dia e esportes.</p>
+        </div>
+
+        <h2>Exercícios para a Parte Inferior</h2>
+
+        <div class="exercise-gallery">
+            <div class="exercise-item" onclick="openModal('agachamentoModal')">
+                <img src="AGACHAMENTO GIF.gif" alt="Agachamento">
+                <p>Agachamento</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 8-12 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+            <div class="exercise-item" onclick="openModal('legPressModal')">
+                <img src="LEG PRESS GIF.gif" alt="Leg Press">
+                <p>Leg Press</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 8-12 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+            <div class="exercise-item" onclick="openModal('stiffModal')">
+                <img src="STIFF GIF.gif" alt="Stiff">
+                <p>Stiff</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 8-12 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+            <div class="exercise-item" onclick="openModal('panturrilhaModal')">
+                <img src="PANTURRILHA GIF.jfif" alt="Panturrilha">
+                <p>Panturrilha</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 10-15 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+            <div class="exercise-item" onclick="openModal('afundoModal')">
+                <img src="AFUNDO GIF.webp" alt="Afundo">
+                <p>Afundo</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 8-12 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+            <div class="exercise-item" onclick="openModal('gluteBridgeModal')">
+                <img src="ELEVAÇÃO DE QUADRIL GIF.jfif" alt="Elevação de Quadril">
+                <p>Elevação de Quadril</p>
+                <div class="exercise-info">
+                    <strong>Repetições:</strong> 10-15 <br>
+                    <strong>Séries:</strong> 3-4 <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botões de navegação -->
+    <div class="navigation-buttons">
+        <a href="SUPERIOR.html" class="nav-button left">Ir para Treino Superior</a>
+        <a href="POSTERIOR.html" class="nav-button right">Ir para Treino Posterior</a>
+    </div>
+
+    <!-- Modal para Agachamento -->
+    <div id="agachamentoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('agachamentoModal')">&times;</span>
+            <h2>Agachamento</h2>
+            <p>O Agachamento é um exercício fundamental para o fortalecimento das pernas e glúteos, promovendo também estabilidade e força funcional, essenciais para várias atividades diárias.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Leg Press -->
+    <div id="legPressModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('legPressModal')">&times;</span>
+            <h2>Leg Press</h2>
+            <p>O Leg Press é um excelente exercício para trabalhar os músculos das pernas, especialmente quadríceps e glúteos, permitindo um treino intenso sem sobrecarregar a coluna.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Stiff -->
+    <div id="stiffModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('stiffModal')">&times;</span>
+            <h2>Stiff</h2>
+            <p>O Stiff é eficaz para fortalecer a cadeia posterior das pernas, trabalhando isquiotibiais e glúteos, além de melhorar a mobilidade e a postura.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Panturrilha -->
+    <div id="panturrilhaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('panturrilhaModal')">&times;</span>
+            <h2>Panturrilha</h2>
+            <p>O exercício de Panturrilha é importante para fortalecer os músculos da parte inferior das pernas, melhorando a resistência e a estabilidade durante atividades físicas.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Afundo -->
+    <div id="afundoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('afundoModal')">&times;</span>
+            <h2>Afundo</h2>
+            <p>O Afundo é um ótimo exercício para desenvolver força e estabilidade nas pernas, trabalhando quadríceps, glúteos e isquiotibiais de forma eficaz.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Elevação de Quadril -->
+    <div id="gluteBridgeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('gluteBridgeModal')">&times;</span>
+            <h2>Elevação de Quadril</h2>
+            <p>A Elevação de Quadril é excelente para fortalecer os glúteos e isquiotibiais, ajudando a melhorar a força do tronco e a estabilidade pélvica.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Academia Profit. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Fecha o modal se o usuário clicar fora do conteúdo
+        window.onclick = function(event) {
+            if (event.target.className === "modal") {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Profit - Sobre</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #4B4B4B;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333; 
+            position: relative; 
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav a {
+            background-color: #333; 
+            color: white; 
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+        nav a:hover {
+            background-color: white; 
+            color: #333; 
+        }
+
+        .content {
+            padding: 40px 20px; 
+            text-align: center;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .roles {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .role {
+            text-align: center;
+            margin: 10px;
+            width: 150px; /* Ajuste conforme necessário */
+        }
+
+        .role img {
+            width: 100px; /* Ajuste o tamanho da imagem do círculo */
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s; /* Efeito de zoom */
+        }
+
+        .role:hover img {
+            transform: scale(1.1); /* Zoom na imagem */
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #4B4B4B; 
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="Profit sem fundo.png" alt="Logo da Academia Profit" class="logo">
+        <p>Seu guia para exercícios físicos</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu Principal</a></li>
+            <li><a href="SOBRE.html">Sobre</a></li>
+            <li><a href="HISTORIA.html">História</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>TODOS OS MEMBROS</h2>
+
+        <div class="section">
+            <h3>Fundadores</h3>
+            <div class="roles">
+                <div class="role">
+                    <img src="fundador1.jpg" alt="Fundador 1">
+                    <p>Diogo</p>
+                </div>
+                <div class="role">
+                    <img src="FUNDADOR 2.webp" alt="Fundador 2">
+                    <p>Zumbi dos Jantares</p>
+                </div>
+                <div class="role">
+                    <img src="FUNDADOR3.webp" alt="Fundador 3">
+                    <p>Wellerson</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Administração</h3>
+            <div class="roles">
+                <div class="role">
+                    <img src="ADM3.webp" alt="Administrador 1">
+                    <p>LordMutezinho</p>
+                </div>
+                <div class="role">
+                    <img src="ADM2.webp" alt="Administrador 2">
+                    <p>MC VV</p>
+                </div>
+                <div class="role">
+                    <img src="ADM1.webp" alt="Administrador 3">
+                    <p>Sr. BanBananas</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Manuel Gomes</h3>
+            <div class="roles">
+                <div class="role">
+                    <img src="CANETAAZUL.webp" alt="Limpeza 1">
+                    <p>Manuel Gomes</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Funcionário de Limpeza</h3>
+            <div class="roles">
+                <div class="role">
+                    <img src="FUNDADOR 2.webp" alt="Limpeza 2">
+                    <p>Vitor Hugo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Academia Profit. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

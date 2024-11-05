@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Profit - Sobre</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Fundo mais escuro */
+            color: #ddd; /* Texto mais claro para contraste */
+        }
+
+        header {
+            background-color: #333; /* Fundo do cabeçalho */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+    background-color: #000; /* Fundo do nav preto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav a {
+    background-color: #000; /* Fundo dos links preto */
+    color: #fff; /* Texto branco */
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+nav a:hover {
+    background-color: white; /* Fundo branco no hover */
+    color: #333; /* Texto escuro no hover */
+}
+
+
+        .content {
+            padding: 40px 20px; 
+            text-align: center;
+        }
+
+        .presentation {
+            margin: 20px auto;
+            background-color: #2a2a2a; /* Fundo escuro para a apresentação */
+            padding: 40px; 
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            width: calc(100% - 40px); 
+            max-width: 1200px; 
+            text-align: left; 
+        }
+
+        .presentation h2 {
+            color: #fff; /* Cabeçalho branco */
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .presentation p {
+            font-size: 1.1rem;
+            color: #ddd; /* Texto claro */
+            line-height: 1.6; 
+            margin-bottom: 15px; 
+        }
+
+        .team {
+            display: flex;
+            justify-content: center; 
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .member {
+            text-align: center;
+            margin: 10px;
+            width: 150px; 
+            cursor: pointer; 
+        }
+
+        .member img {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            object-fit: cover; 
+            transition: transform 0.3s; 
+        }
+
+        .member:hover img {
+            transform: scale(1.1); 
+        }
+
+        .testimonials {
+            background-color: #444; /* Fundo para depoimentos */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .testimonials h3 {
+            text-align: center;
+            color: #fff; /* Cabeçalho branco */
+        }
+
+        .testimonial {
+            font-style: italic;
+            margin: 10px 0;
+            color: #ddd; /* Texto claro */
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #333; 
+            color: white;
+        }
+
+        .benefits {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .benefit {
+            background-color: #444; /* Fundo escuro para benefícios */
+            border: 1px solid #666;
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(30% - 20px);
+            margin: 10px;
+            text-align: center;
+            color: #ddd; /* Texto claro */
+        }
+
+        /* Estilos para o modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.8); 
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #2a2a2a;
+            margin: 5% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 600px;
+            border-radius: 10px;
+            color: #ddd; /* Texto claro */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: white; /* Texto branco no hover */
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="Profit sem fundo.png" alt="Logo da Academia Profit" class="logo">
+        <p>Seu guia para exercícios físicos</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu Principal</a></li>
+            <li><a href="SOBRE.html">Sobre</a></li>
+            <li><a href="HISTORIA.html">História</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="presentation">
+            <h2>Sobre a Academia Profit</h2>
+            <p>A Academia Profit se destaca como uma das principais instituições de fitness da região, oferecendo um espaço dedicado à promoção da saúde e do bem-estar. Com uma infraestrutura moderna, nossa academia está equipada com os melhores aparelhos de ginástica e proporciona um ambiente acolhedor para todos os nossos membros.</p>
+        </div>
+
+        <div class="team">
+            <h2 style="width: 100%; text-align: center;">Nossa Equipe</h2>
+            <div class="member" onclick="openModal('jonhModal')">
+                <img src="JONH.avif" alt="Instrutor Jonh">
+                <p>Instrutor Jonh</p>
+                <p>Especialidade: Musculação</p>
+            </div>
+            <div class="member" onclick="openModal('carlosModal')">
+                <img src="CARLOS.webp" alt="Instrutor Carlos">
+                <p>Instrutor Carlos</p>
+                <p>Especialidade: Yoga</p>
+            </div>
+            <div class="member" onclick="openModal('mariaModal')">
+                <img src="Maria.webp" alt="Instrutora Maria">
+                <p>Instrutora Maria</p>
+                <p>Especialidade: Dança</p>
+            </div>
+        </div>
+
+        <div class="benefits">
+            <div class="benefit">
+                <h3>Ambiente Acolhedor</h3>
+                <p>Um espaço onde todos se sentem à vontade e motivados.</p>
+            </div>
+            <div class="benefit">
+                <h3>Profissionais Qualificados</h3>
+                <p>Equipe dedicada a garantir um treino seguro e eficaz.</p>
+            </div>
+            <div class="benefit">
+                <h3>Infraestrutura Moderna</h3>
+                <p>Equipamentos de última geração para todos os níveis de treino.</p>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h3>O que nossos membros dizem:</h3>
+            <p class="testimonial">"A Academia Profit mudou minha vida! O ambiente é incrível e a equipe é super atenciosa!" - Maria S.</p>
+            <p class="testimonial">"A variedade de aulas me motiva a ir todos os dias!" - João P.</p>
+            <p class="testimonial">"Me sinto parte de uma comunidade aqui!" - Ana T.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Instrutor Jonh -->
+    <div id="jonhModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('jonhModal')">&times;</span>
+            <h2>Instrutor Jonh</h2>
+            <p>Com mais de 10 anos de experiência em musculação, Jonh é apaixonado por ajudar seus alunos a atingirem seus objetivos. Ele é especializado em treinamento personalizado e acredita que cada pessoa tem um potencial único que deve ser explorado. Jonh também promove workshops sobre saúde e nutrição, garantindo que seus alunos tenham todo o suporte necessário.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Instrutor Carlos -->
+    <div id="carlosModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('carlosModal')">&times;</span>
+            <h2>Instrutor Carlos</h2>
+            <p>Carlos é um instrutor de yoga certificado, com 5 anos de experiência em diversas modalidades de yoga. Ele acredita que a prática de yoga não apenas melhora a flexibilidade, mas também promove a saúde mental e emocional. Carlos oferece aulas para todos os níveis e sempre busca adaptar as posturas às necessidades dos alunos, garantindo que todos se sintam confortáveis e desafiados.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Instrutora Maria -->
+    <div id="mariaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mariaModal')">&times;</span>
+            <h2>Instrutora Maria</h2>
+            <p>Maria é especialista em dança e traz 8 anos de experiência no ensino de diferentes estilos. Sua abordagem é focada na diversão e na expressão pessoal, permitindo que os alunos se sintam livres e confiantes. Além de aulas regulares, Maria organiza eventos de dança e apresentações, incentivando seus alunos a se apresentarem e compartilharem seu talento.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Academia Profit. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Fecha o modal se o usuário clicar fora do conteúdo
+        window.onclick = function(event) {
+            if (event.target.className === "modal") {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Profit - Menu</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Fundo mais escuro */
+            color: #ddd; /* Texto mais claro para contraste */
+        }
+
+        header {
+            background-color: #333; /* Fundo do cabeçalho mais escuro */
+            color: #fff; /* Texto branco */
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #000; /* Fundo do nav preto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav a {
+            background-color: #000; /* Fundo dos links preto */
+            color: #fff; /* Texto branco */
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+        nav a:hover {
+            background-color: white; /* Fundo branco no hover */
+            color: #333; /* Texto escuro no hover */
+        }
+
+        .content {
+            padding: 100px 20px 20px; 
+            text-align: center;
+        }
+
+        .image-slideshow {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .presentation {
+            margin: 20px auto;
+            background-color: #2a2a2a; /* Fundo escuro para a apresentação */
+            padding: 40px; 
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: calc(100% - 40px); 
+            max-width: 1200px; 
+            text-align: left; 
+            color: #ddd; /* Texto claro */
+        }
+
+        .presentation h2 {
+            color: #fff; /* Cabeçalho branco */
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .presentation p {
+            font-size: 1.1rem;
+            color: #ddd; /* Texto claro */
+            line-height: 1.6; 
+            margin-bottom: 15px; 
+        }
+
+        .exercise-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .exercise-item {
+            margin: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer; 
+            transition: transform 0.3s;
+        }
+
+        .exercise-item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .exercise-item:hover img {
+            transform: scale(1.05); 
+        }
+
+        .reasons-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .reason-box {
+            background-color: #333; /* Fundo escuro para as caixas de razão */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: calc(45% - 20px);
+            margin: 10px;
+            text-align: left;
+            color: #ddd; /* Texto claro */
+        }
+
+        .reason-box h2 {
+            color: #fff; /* Cabeçalho branco */
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .reason-box p {
+            font-size: 1rem;
+            color: #ddd; /* Texto claro */
+            line-height: 1.4; 
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #333; /* Fundo do footer mais escuro */
+            color: white;
+        }
+
+        .sobre-mais {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #ddd; /* Cor do texto */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="Profit sem fundo.png" alt="Logo da Academia Profit" class="logo">
+        <p>Seu guia para exercícios físicos</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu Principal</a></li>
+            <li><a href="SOBRE.html">Sobre</a></li>
+            <li><a href="HISTORIA.html">História</a></li>
+        </ul>
+    </nav>
+
+    <center>
+    <div class="presentation">
+        <h2>Bem-vindo à Academia Profit!</h2>
+        <p>Estamos felizes em tê-lo aqui! Na Academia Profit, você encontrará um ambiente acolhedor e motivador, equipado com as melhores ferramentas e tecnologias para o seu treino.</p>
+        <p>Nossos profissionais altamente qualificados estão prontos para oferecer suporte personalizado, garantindo que cada sessão de treino seja não apenas eficaz, mas também divertida.</p>
+        <p>Descubra uma variedade de atividades que se adaptam ao seu nível e objetivos, e junte-se a nós para transformar sua jornada de fitness em uma experiência inesquecível!</p>
+    </div>
+    </center>
+
+    <div class="content">
+        <div class="image-slideshow">
+            <div class="slide">
+                <img src="gym1.jpg" alt="Academia 1">
+            </div>
+            <div class="slide">
+                <img src="gym2.jpg" alt="Academia 2">
+            </div>
+            <div class="slide">
+                <img src="gym3.jpg" alt="Academia 3">
+            </div>
+        </div>
+
+        <p class="intro">Explore nossas categorias de exercícios para otimizar seu treino e alcançar seus objetivos.</p>
+
+        <h2>Exercícios</h2>
+        
+        <div class="exercise-menu">
+            <div class="exercise-item" onclick="location.href='SUPERIOR.html'">
+                <img src="exercicio superior.jpg" alt="Exercícios Superiores">
+                <p>Exercícios Superiores</p>
+            </div>
+            <div class="exercise-item" onclick="location.href='INFERIOR.html'">
+                <img src="exercicios_inferior.jpg" alt="Exercícios Inferiores">
+                <p>Exercícios Inferiores</p>
+            </div>
+            <div class="exercise-item" onclick="location.href='POSTERIOR.html'">
+                <img src="exercicio posterior.webp" alt="Exercícios Posteriores">
+                <p>Exercícios Posteriores</p>
+            </div>
+        </div>
+
+        <div class="reasons-container">
+            <div class="reason-box">
+                <h2>Por que Escolher a Academia Profit?</h2>
+                <p>Na Academia Profit, sabemos que a escolha de uma academia é fundamental para a sua jornada de fitness. Oferecemos um espaço que prioriza sua saúde e bem-estar, com um ambiente amigável e inclusivo. Cada membro é acolhido e encorajado a atingir seus objetivos.</p>
+                <p>Nossos instrutores são profissionais experientes, prontos para oferecer suporte personalizado. Eles entendem que cada pessoa tem suas próprias necessidades e metas, e trabalham para criar um plano de treino que se encaixe perfeitamente em sua rotina.</p>
+                <p>Aqui, você terá acesso a uma ampla variedade de equipamentos modernos, espaços para musculação, cardio, aulas em grupo e muito mais. Temos certeza de que você encontrará tudo o que precisa para um treino eficaz e gratificante.</p>
+                <p>Além disso, promovemos uma cultura de celebração das conquistas, grandes ou pequenas. Participar de atividades sociais e eventos é uma ótima maneira de conhecer outros membros e fazer novas amizades.</p>
+            </div>
+            <div class="reason-box">
+                <h2>Benefícios e Qualidades da Academia Profit</h2>
+                <p><strong>Ambiente Acolhedor e Inclusivo:</strong> Criamos um espaço onde todos se sentem à vontade. Independentemente de sua experiência, você será acolhido por uma comunidade solidária.</p>
+                <p><strong>Profissionais Qualificados e Dedicados:</strong> Nossa equipe é composta por especialistas prontos para orientá-lo em cada passo do caminho, garantindo um treino seguro e eficiente.</p>
+                <p><strong>Infraestrutura Moderna:</strong> Equipamentos de última geração e áreas específicas para cada tipo de treino, desde musculação até aulas de dança.</p>
+                <p><strong>Variedade de Atividades:</strong> Oferecemos aulas diversificadas que atendem a todos os níveis, permitindo que você encontre o que mais gosta.</p>
+                <p><strong>Foco na Saúde e Bem-Estar:</strong> Além do físico, abordamos a saúde mental e emocional, promovendo um estilo de vida equilibrado.</p>
+                <p><strong>Apoio Contínuo:</strong> Estamos ao seu lado, oferecendo check-ins regulares para monitorar seu progresso e adaptar seu plano de treino sempre que necessário.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sobre-mais">
+        <a href="SABER MAIS.html" style="text-decoration: none; color: #ddd;">
+            <p>Sobre mais</p>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Academia Profit. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Muda a imagem a cada 3 segundos
+        }
+    </script>
+
+</body>
+</html>
